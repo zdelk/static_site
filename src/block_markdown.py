@@ -55,13 +55,10 @@ def block_to_block_type(block):
 
 def text_to_children(text):
     children = []
-    lines = text.split("\n")
-    for line in lines:
-        child = []
-        if line == '':
-            continue
-        child.append(text_to_textnodes(line))
-    children.append(child)
+    text_nodes = text_to_textnodes(text)
+    for text_node in text_nodes:
+        text_node.text = text_node.text.replace("\n"," ")
+        children.append(text_node_to_html_node(text_node))
     return children
         
 def markdown_to_html_node(markdown):
@@ -71,29 +68,34 @@ def markdown_to_html_node(markdown):
         children = []
         
         btype = block_to_block_type(block)
-        # block.replace('\n', ' ')
-        text_nodes = text_to_textnodes(block)
-        for text_node in text_nodes:
-            text_node.text = text_node.text.replace("\n"," ")
-            children.append(text_node_to_html_node(text_node))
+        print(f"Block Type: {btype}")
+        # block = block.replace('\n', '')
         match btype:
             case BlockType.PARAGRAPH:
-                # children = text_to_children(block)
+                
+                children = text_to_children(block)
                 node = ParentNode('p',children)
                 
             case BlockType.HEADING:
-                tags = block.split(" ", 1)
+                tags, _ = block.split(" ", 1)
                 count = len(tags) + 1
-                node = HTMLNode(f'h{count}')
+                node = ParentNode(f'h{count}', children)
             
             case BlockType.CODE: # Parent would be <pre> child are <code>
-                node = HTMLNode('code')
+                block = block.replace("```", "").lstrip("\n")
+                text_node = TextNode(block, TextType.TEXT)
+                html_node = text_node_to_html_node(text_node)
+                code_node = ParentNode('code', [html_node])
+                node = ParentNode('pre', [code_node])
             case BlockType.QUOTE:
-                node = HTMLNode('blockquote')
+                children = text_to_children(block)
+                node = ParentNode('blockquote', children)
             case BlockType.ULIST: # Parent would be <ul> children are <li>
-                node = HTMLNode('ul')
+                # list_nodes = make_list_nodes(block) # Need to create
+                node = ParentNode('ul', list_nodes)
             case BlockType.OLIST: # Parent would be <ol> children are <li>
-                node = HTMLNode('ol')
+                # list_nodes = make_list_nodes(block) Need to create
+                node = ParentNode('ol')
         child.append(node)
     parent = ParentNode("div", child)
 
