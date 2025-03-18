@@ -2,6 +2,7 @@ from enum import Enum
 import re
 from htmlnode import HTMLNode, ParentNode, LeafNode
 from inline_markdown import text_to_textnodes
+from textnode import TextNode, text_node_to_html_node, TextType
 
 def markdown_to_blocks(markdown):
     block_list = []
@@ -64,14 +65,21 @@ def text_to_children(text):
     return children
         
 def markdown_to_html_node(markdown):
-    parent = ParentNode("div")
+    child = []
     blocks = markdown_to_blocks(markdown)
     for block in blocks:
+        children = []
+        
         btype = block_to_block_type(block)
-        children = text_to_children(block)
+        # block.replace('\n', ' ')
+        text_nodes = text_to_textnodes(block)
+        for text_node in text_nodes:
+            text_node.text = text_node.text.replace("\n"," ")
+            children.append(text_node_to_html_node(text_node))
         match btype:
             case BlockType.PARAGRAPH:
-                node = HTMLNode('p',)
+                # children = text_to_children(block)
+                node = ParentNode('p',children)
                 
             case BlockType.HEADING:
                 tags = block.split(" ", 1)
@@ -86,6 +94,10 @@ def markdown_to_html_node(markdown):
                 node = HTMLNode('ul')
             case BlockType.OLIST: # Parent would be <ol> children are <li>
                 node = HTMLNode('ol')
-            
-    
+        child.append(node)
+    parent = ParentNode("div", child)
+
     return parent
+
+# def create_paragraph(block):
+    
