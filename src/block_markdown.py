@@ -61,15 +61,22 @@ def text_to_children(text):
         children.append(text_node_to_html_node(text_node))
     return children
         
+def make_list_nodes(text):
+    children = []
+    lines = text.split("\n")
+    for line in lines:
+        _, content = line.split(" ", 1)
+        children.append(LeafNode("li", content))
+        
+    return children
+
 def markdown_to_html_node(markdown):
     child = []
     blocks = markdown_to_blocks(markdown)
     for block in blocks:
-        children = []
         
         btype = block_to_block_type(block)
-        print(f"Block Type: {btype}")
-        # block = block.replace('\n', '')
+
         match btype:
             case BlockType.PARAGRAPH:
                 
@@ -77,8 +84,9 @@ def markdown_to_html_node(markdown):
                 node = ParentNode('p',children)
                 
             case BlockType.HEADING:
-                tags, _ = block.split(" ", 1)
-                count = len(tags) + 1
+                tags, content = block.split(" ", 1)
+                count = len(tags)
+                children = text_to_children(content)
                 node = ParentNode(f'h{count}', children)
             
             case BlockType.CODE: # Parent would be <pre> child are <code>
@@ -87,15 +95,17 @@ def markdown_to_html_node(markdown):
                 html_node = text_node_to_html_node(text_node)
                 code_node = ParentNode('code', [html_node])
                 node = ParentNode('pre', [code_node])
+                
             case BlockType.QUOTE:
                 children = text_to_children(block)
                 node = ParentNode('blockquote', children)
+                
             case BlockType.ULIST: # Parent would be <ul> children are <li>
-                # list_nodes = make_list_nodes(block) # Need to create
+                list_nodes = make_list_nodes(block) # Need to create
                 node = ParentNode('ul', list_nodes)
             case BlockType.OLIST: # Parent would be <ol> children are <li>
-                # list_nodes = make_list_nodes(block) Need to create
-                node = ParentNode('ol')
+                list_nodes = make_list_nodes(block) # Need to create
+                node = ParentNode('ol', list_nodes)
         child.append(node)
     parent = ParentNode("div", child)
 
