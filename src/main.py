@@ -42,8 +42,6 @@ template_path = "template.html"
     
 def main(base_path = "/"):
     
-    
-    
     if os.path.exists(dir_path_docs):
         shutil.rmtree(dir_path_docs)
         
