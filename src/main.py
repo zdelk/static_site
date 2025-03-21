@@ -36,9 +36,13 @@ def generate_pages_recursively(dir_path_content, template_path, dest_dir_path, B
     
         
 def main():
+    
     base_path = sys.argv[1]
     if base_path is None:
         base_path = "/"
+    if os.path.exists("docs"):
+        shutil.rmtree("docs")
+        
     copy_static("static", "docs")
     generate_pages_recursively("content", "template.html", "docs", base_path)
 main()
