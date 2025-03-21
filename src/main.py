@@ -3,6 +3,7 @@ import os
 from generator import generate_page
 import sys
 
+base_path = sys.argv[1]
 def copy_static(input, destination):
     if not os.path.exists(input):
         raise Exception("Input Folder Path Not valid")
@@ -34,15 +35,24 @@ def generate_pages_recursively(dir_path_content, template_path, dest_dir_path, B
         else:
             generate_pages_recursively(current_path, template_path, current_dest)
     
-        
-def main():
+dir_path_static = "static"
+dir_path_docs = "docs"
+dir_path_content = "content"
+template_path = "template.html" 
     
-    base_path = sys.argv[1]
-    if base_path is None:
-        base_path = "/"
-    if os.path.exists("docs"):
-        shutil.rmtree("docs")
+def main(base_path = "/"):
+    
+    
+    
+    if os.path.exists(dir_path_docs):
+        shutil.rmtree(dir_path_docs)
         
-    copy_static("static", "docs")
-    generate_pages_recursively("content", "template.html", "docs", base_path)
-main()
+    copy_static(dir_path_static, dir_path_docs)
+    generate_pages_recursively(
+        dir_path_content, 
+        template_path,
+        dir_path_docs,
+        base_path,
+    )
+    
+main(base_path)
