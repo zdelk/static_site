@@ -1,45 +1,20 @@
-# Tolkien Fan Club
+# Zachary Delk's Portfolio
 
 ![JRR Tolkien sitting](/images/tolkien.png)
 
-Here's the deal, **I like Tolkien**.
+Hello and Welcome to my Portfolio.
 
-> "I am in fact a Hobbit in all but size."
->
-> -- J.R.R. Tolkien
+This static site will act as a sink where I plan on putting projects I've done that show various skill I possess.
 
-## Blog posts
+Since this site is hosted for free on github, I'm grouping the projects to pages. Don't want to incure charges
 
-- [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
-- [Why Tom Bombadil Was a Mistake](/blog/tom)
-- [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
+## Project Groups
 
-## Reasons I like Tolkien
+- [Sustainability and Energy Efficiancy](/blog/sustainandEE)
+- [Robotic Programming](/blog/roboprogramming)
+- [General Data Analysis](/blog/dataanalysis)
+- [Misc.](/blog/misc)
 
-- You can spend years studying the legendarium and still not understand its depths
-- It can be enjoyed by children and adults alike
-- Disney _didn't ruin it_ (okay, but Amazon might have)
-- It created an entirely new genre of fantasy
-
-## My favorite characters (in order)
-
-1. Gandalf
-2. Bilbo
-3. Sam
-4. Glorfindel
-5. Galadriel
-6. Elrond
-7. Thorin
-8. Sauron
-9. Aragorn
-
-Here's what `elflang` looks like (the perfect coding language):
-
-```
-func main(){
-    fmt.Println("Aiya, Ambar!")
-}
-```
 
 Want to get in touch? [Contact me here](/contact).
 
