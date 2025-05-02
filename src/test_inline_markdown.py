@@ -136,12 +136,12 @@ class TestInline(unittest.TestCase):
         self.assertListEqual([], matches)
         
     def test_extract_links(self):
-        text = "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)"
+        text = "This is text with a link [to boot dev](https://www.bo_ot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)"
         matches = extract_markdown_links(text)
         
         self.assertListEqual(
             [
-            ("to boot dev", "https://www.boot.dev"),
+            ("to boot dev", "https://www.bo_ot.dev"),
             ("to youtube", "https://www.youtube.com/@bootdotdev")
             ],
             matches
