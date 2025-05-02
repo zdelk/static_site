@@ -16,7 +16,7 @@ This project involved going into low-incomes homes and installing sensors to mon
 Technical: Data Analysis, Visualization, Regression, R programming
 Soft: Communication, Time management
 ### Proof:
-[Boot.dev](https://www.github.com/zdelk/sfKresge)
+[Boot.dev](https://www.github.com/zdelk/sf\_Kresge)
 ## IAQ Sensor Network
 ### Description:
 After doing the project above, I learned it I dont like using other people's sensors. They tend to diswaid the users (me) from trying to fix the sensors in lieu of buying brand new ones for alot of money. The monitors used also required a subscription to access the data. And even though you play them alot of money, thier dashboards kinda stink and its hard to pull data from thier site. THEY DONT EVEN HAVE AN API (atleast when I was doing the project). So, I decided to figure something else out. After a long search I came across an open source IAQ monior from AirGradient. A Diy kit was ordered. Code was written to connect it to a server (Promethous) being hosted on a embedded system (RaspberryPi). More code was written to automate the process of pulling data and sending it to my email. 

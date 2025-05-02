@@ -8,16 +8,20 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
         if node.text_type is not TextType.TEXT:
             new_nodes.append(node)
         else:
-            split_text = node.text.split(delimiter)
+            temp_text = node.text.replace("\\" + delimiter, "ESCAPED")
+            
+            split_text = temp_text.split(delimiter)
             if len(split_text) % 2 == 0:
                 raise Exception("Markdown Error: Missing matching delimiter")
             for i in range(len(split_text)):
                 if split_text[i] == "":
                     continue
+                
+                current_text = split_text[i].replace("ESCAPED", delimiter)
                 if i % 2 == 0:
-                    new_nodes.append(TextNode(split_text[i], TextType.TEXT))
+                    new_nodes.append(TextNode(current_text, TextType.TEXT))
                 else:
-                    new_nodes.append(TextNode(split_text[i], text_type))
+                    new_nodes.append(TextNode(current_text, text_type))
     return new_nodes
 
 
