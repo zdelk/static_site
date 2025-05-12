@@ -34,7 +34,7 @@ A DIY indoor air quality monitoring system built using open-source hardware and 
 
 ## Anomaly Detection in Unsupervised Machine Learning
 
-### Summary:  
+### Summary  
 
 Final project in an Automation class focused on detecting inefficiencies in a simulated production line. We trained a neural network on time-series data from a marble sorting machine.
 
