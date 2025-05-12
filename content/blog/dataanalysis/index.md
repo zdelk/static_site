@@ -1,67 +1,94 @@
-# Data Analysis Projects
+# Data Projects
 
 [< Back Home](/)
 
-![Glorfindel image](/images/glorfindel.png)
+![Yawn image](/images/yawn.png)
 
-While data analysis rears it's head in pretty much any scientific project, I have dedicated experience to the art of data story telling and extracting deeper meaning from available data. Most of my data analysis projects are related to sustainability.
+I like working with data because it helps make sense of the world. Whether it's building models, visualizing trends, or pulling insights from messy datasets, I enjoy the process of turning numbers into something meaningful.
 
 ## Optimizing Residential HVAC Systems
 
-### Description
+### Summary  
+This DOE-funded project evaluated smart diagnostic tools for residential HVAC systems. My job was to clean and analyze field-collected commissioning data to assess their effectiveness.
 
-This was Building America (DOE) funded project that investigated the outcome of using a smart diagnostic tool for residential HVAC installation and commissioning. My task was to analyze the data the was taken by the diagnostic tools. This included things like airflow, fan draw, line pressures, and temperature readings. A big part of the project involved data cleaning. I developed multiple filters to ensure only quality data was used for the analysis. Some of this filters were later implemented by the smart tool creators after consulting with them. With the clean data, I was able to perform statically significant analysis and create various visualizations.
+### What I Built  
+- Filtered noisy HVAC sensor data for statistical integrity  
+- Developed quality filters later adopted by the device developers  
+- Produced insights and visualizations showing performance trends
 
-### Skills
-**Technical:**  Data Analysis, Visualization, R programming  
-**Soft:** Communication, Report Generation, Storytelling
+### Skills & Tools 
+- **Technical:** R, Data Cleaning, Statistical Analysis, Visualization  
+- **Soft:** Technical Communication, Report Generation  
 
-### Proof
-[Published Paper](https://www.osti.gov/biblio/2406423)
+### Links & Media  
+- [Published Paper](https://www.osti.gov/biblio/2406423)
 
 ## Indoor Air Quality (IAQ) Analysis
 
-### Description
+### Summary  
+This community-focused project involved monitoring indoor air quality in low-income homes before and after renovations. Although I joined near the end, I became the sole lead on the project and took charge of every aspect.
 
-This project involved going into low-incomes homes and installing sensors to monitor the air quality before and after renovation. I joined the project towards the tail end but as soon as I joined. I became the only one working on it. I was in charge of contacting building and property managers, organizing visit dates, installing the sensors, collecting and analyzing the data, and reporting the findings. So pretty much everything.
+### What I Built
+- Contacted property managers and scheduled site visits  
+- Installed IAQ sensors and managed their data  
+- Analyzed pre- and post-renovation air quality  
+- Delivered final findings in a formal report
 
-### Skills
+### Skills & Tools 
+- **Technical:** Data Analysis, R, Regression Modeling, Visualization  
+- **Soft:** Communication, Time Management, Project Ownership  
 
-**Technical**: Data Analysis, Visualization, Regression, R programming  
-**Soft**: Communication, Time-management
+### Links & Media  
+- [GitHub Repo](https://github.com/zdelk/sf\_Kresge)  
+- [Final Report](https://drive.google.com/file/d/1dLN8B5jeQ87wIvqb74JZT3VUIM9rT5Mq/view?usp=sharing)
+- [Tenant Infographic](https://drive.google.com/file/d/1Opczzv322UYmG3LOOzjvhOiqCu9fsS7I/view?usp=sharing)
 
-### Proof
-[Github Repo](https://github.com/zdelk/sf\_Kresge)  
-[Final Deliverable](https://link.com/to\_pdf\_maybe)
+### Summary  
+This project assessed the potential energy savings achievable by upgrading single-family homes across Georgia. It supported strategic planning for an EnergyShed initiative led by Georgia Tech by identifying where retrofits would be most impactful.
 
-## 40 Year Temperature Analysis for Atlanta
+### What I Built  
+- Aggregated data on Georgia's existing housing stock by age, type, and region  
+- Created baseline energy models for representative homes from different construction eras  
+- Simulated energy performance for homes with various efficiency upgrades  
+- Calculated and compared energy savings potential across housing archetypes  
+- Produced data visualizations and summary statistics for stakeholders
 
-### Description
+### Skills & Tools 
+- **Technical:** Building Energy Modeling (BEopt), Data Analysis (R/Python), Excel  
+- **Soft:** Research Synthesis, Technical Communication, Collaboration with Stakeholders 
 
-I've cared about the weather for quite a while. This project was presented at the Kennesaw State University R-Day. I didn't win anything but I'm still proud of my work. And my main graph looks pretty sick.
+### Links & Media 
+- [Final Report](https://drive.google.com/file/d/1iykORjsjEmDrG9D3gE0eqXoM6AQWTvmo/view?usp=sharing)
+## 40-Year Temperature Trends in Atlanta
 
-### Skills
+### Summary  
+This was a personal project analyzing 40 years of Atlanta temperature data. I presented it at KSU’s R Day. I didn’t place, but I gained experience in long-term climate data analysis and visual storytelling.
 
-**Technical:** Data Analysis, Regression, Statistics, R programming  
-**Soft:** Presentation, Communication
+### What I Built 
+- Cleaned and structured decades of NOAA temperature data  
+- Performed statistical regression to analyze warming trends  
+- Created clear visuals that told the story behind the numbers
 
-### Proof:
+### Skills & Tools 
+- **Technical:** R, Regression, Statistics, Data Visualization  
+- **Soft:** Scientific Communication, Presentation Skills  
 
-[Poster](https://link.com/my\_poster)
+### Links & Media  
+- [Final Poster](https://drive.google.com/file/d/1PK-vpbhxUrUa2X58lgExtIRo8kBpAQli/view?usp=sharing)
 
-This final project is a little disconnected from the other but it was a fun project.
+## League of Legends Match Outcome Analysis
 
-## League of Legends Game Analysis
+### Summary 
+For a statistics class final, I explored what factors predict winning in League of Legends. I pulled match data from Riot’s API and found that first-dragon advantage correlates strongly with match outcomes.
 
-### Description
+### What I Built 
+- Wrote an R script to query and clean Riot Games match data  
+- Built a regression model to identify predictive features  
+- Generated insights for early match advantage indicators
 
-This was the final project for a stats class. We could make the project about anything we could get data for and at the time I was pretty in to League of Legends (LOL) with is a popular MOBA game. I was never very good at the game, but I was extremely curious to see if there what knowledge could be gained from looking at the data for high level matches. This projected involved pulling match data from Riot's (the company that created the game) API and preforming various types of analysis on it. The end goal was the develop a method of predicting the winner of a match as early as possible. From what I found, the team that kills the first dragon wins the match about 60% of the time.
+### Skills & Tools 
+- **Technical:** R, API Data Handling, Predictive Modeling  
+- **Soft:** Report Writing, Data Storytelling  
 
-### Skills
-
-**Technical:** Regression, Prediction, R programming
-**Soft:** Report Generation, Data Story Telling
-
-## Proof
-
-[Report](https://link.com/loldata)
+### Links & Media  
+- [Final Report](https://drive.google.com/file/d/1om3vMGXek8zl-OtgcLf0Z6edgUNImBVU/view?usp=sharing)

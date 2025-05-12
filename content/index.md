@@ -1,12 +1,12 @@
 # Welcome to my Portfolio
 
-![JRR Tolkien sitting](/images/tolkien.png)
+![My Face](/images/selfie.png)
 
-Hello. My name is Zachary Delk. This site is a repository for some of the projects I've worked on over the years.
+Hello, I'm Zachary Delk. I like cats, data, and robotics. My background is broad and doesn't fit neatly in a one page resume. This site showcases some of the personal, academic, and research projects I've worked on over the years.
 
 ## General Overview
 
-I have Master's degree in Intelligent Robotics System for Kennesaw State University. I also have two bachelors (mathematics and physics)
+I hold a Master’s degree in Intelligent Robotic Systems from Kennesaw State University, along with dual Bachelor’s degrees in Mathematics and Physics. My work spans robotics, data science, embedded systems, and applied research in energy and sustainability.
 
 ## Areas of Work
 
@@ -16,5 +16,7 @@ I have Master's degree in Intelligent Robotics System for Kennesaw State Univers
 
 
 Want to get in touch? [Contact me here](/contact).
+
+![Strawberry cats](/images/strawberry.png)
 
 This site was generated with a custom-built [static site generator](https://www.boot.dev/courses/build-static-site-generator-python) from the course on [Boot.dev](https://www.boot.dev).

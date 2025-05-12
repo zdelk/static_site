@@ -2,48 +2,74 @@
 
 [< Back Home](/)
 
-![Glorfindel image](/images/glorfindel.png)
+![Pearl image](/images/pearl.png)
 
-The page hold various projects I've worked on related to Robotics and general Programming. I have the most experience with Python but working knowledge of Golang and exposure to C/C++
+
+This section showcases projects that reflect my interest in automation, controls, and code. Whether it's machine learning, embedded systems, or simulations, I enjoy building things that move, think, or learn.
 
 ## IAQ Sensor Network
 
-### Description
+### Summary
 
-After doing the project above, I learned it I don't like using other people's sensors. They tend to dissuade the users (me) from trying to fix the sensors in lieu of buying brand new ones for a lot of money. The monitors used also required a subscription to access the data. And even though you play them a lot of money, their dashboards kinda stink and its hard to pull data from their site. THEY DON'T EVEN HAVE AN API (at least when I was doing the project). So, I decided to figure something else out. After a long search I came across an open source IAQ monitor from AirGradient. A Diy kit was ordered. Code was written to connect it to a server (Prometheus) being hosted on a embedded system (RaspberryPi). More code was written to automate the process of pulling data and sending it to my email. 
+A DIY indoor air quality monitoring system built using open-source hardware and self-hosted infrastructure. Designed to collect, visualize, and automatically report environmental data without relying on proprietary sensors or cloud services.
 
-### Skills:
+### What I Built  
 
-Technical: Embedded Systems (RaspberryPi), Python, Time-series Database (Prometheus), Real-time Visualizations (Grafana)  
-Soft: Researching, Technical Writing
+- Configured Raspberry Pi as a Wi-Fi access point and data gateway  
+- Integrated multiple AirGradient One sensors to auto-connect via Wi-Fi  
+- Developed Python scripts to collect, parse, and forward data  
+- Deployed InfluxDB for local time-series storage and Prometheus for monitoring  
+- Created dashboards in Grafana for real-time data visualization  
+- Implemented secure remote access via Tailscale
 
-### Proof:
+### Skills & Tools  
 
-[Github Repo](https://github.com/zdelk/IAQ_Pi_network)  
-[Grafana Dashboard](https://zdelk.grafana.net/public-dashboards/ea14be1063c647dabec262c3f1ddec0f)
+- **Technical:** Python, InfluxDB, Grafana, Prometheus, Embedded Systems, Networking  
+- **Soft:** Systems Thinking, Troubleshooting, Independent Research, Technical Writing
 
-## Anomaly Detection using Unsupervised Machine Learning
+### Links & Media
 
-### Description
+- [GitHub Repository](https://github.com/zdelk/IAQ\_Pi\_network)
+- [Grafana Dashboard (Live)](https://zdelk.grafana.net/public-dashboards/ea14be1063c647dabec262c3f1ddec0f)
 
-This was the final project of an Automation class. The idea behind it was to train a neural network that could detected anomalies in a manufacturing process by the cycle time at various points in the line. Generally automated lines have controllers that will throw issues that cause large problems or if something is really broken but these systems don't watch for small time losses from A to B. While not inherently a big issue, over time this can lead to a reduction in productivity and generally indicates a larger issue that the controller can't detect. While we did not have a large factory with multiple automated lines to play with, we did have a marble run machine that was fitted with a sorting device that would report sensor states over an Arduino IOT device. This was initially a pretty promising project, but we learned towards the end that the Arduino had a rate limit for publishing data to the cloud that skewed our measurements. I would be possible to implement a different embedded system without this rate limit but due to time and cost concerns we were not able to implement it.
+## Anomaly Detection in Unsupervised Machine Learning
 
-### Skills
+### Summary:  
 
-**Technical:** Embedded Systems (RaspberryPi and Arduino), Python (Pytorch), Time-Series Data Handling, Iterative Testing and Tuning  
-**Soft:** Report Generation, Teamwork, Time-management
+Final project in an Automation class focused on detecting inefficiencies in a simulated production line. We trained a neural network on time-series data from a marble sorting machine.
 
-### Proof
+### What I Built 
 
-[Final Report](https://link.com/anomaly)
+- Used a Raspberry Pi and Arduino to simulate manufacturing data  
+- Trained a PyTorch neural net to identify anomalies  
+- Evaluated system performance despite I/O publishing limitations
 
-## Command Line BlackJack (IN PROGRESS)
+### Skills & Tools 
 
-### Description
+- **Technical:** Python, PyTorch, Embedded Systems (Arduino & Raspberry Pi), Time-Series Machine Learning, Convolutional Neural Network
+- **Soft:** Teamwork, Troubleshooting, Iterative Testing  
 
-This is a personal project I've been working on just to get better at Object Oriented Programming. The end goal is to be able to play blackjack (21) on the command line. Was also thinking about integrating CPUs or a way of tracking the "count" of the table as a learning device inspired by the 2008 movie 21. It's still a work in progress but has been a fun experience.
+### Links & Media
 
-### Skills
+- [Final Report](https://drive.google.com/file/d/1fVLx1aH9SiOkcyr0RGdK9V4EoE1TaGwc/view?usp=sharing)
 
-**Technical:** Python, Object Oriented Programming (OOP), Decision Tree
-**Soft:** Project Design, Documentation
+## Command Line Blackjack (In Progress)
+
+### Summary:  
+
+A personal side project to get better at Object Oriented Programming (OOP) in Python. The goal is to create a fully functional blackjack game you can play in the terminal.
+
+### What I Built 
+
+- Designed game logic using OOP structure in Python  
+- Implemented playable version of blackjack via CLI  
+- Planning to integrate card counting or CPU players
+
+### Skills & Tools 
+
+- **Technical:** Python, OOP, CLI Game Logic  
+- **Soft:** Self-Directed Learning, Project Design  
+
+### Links & Media  
+
+- [GitHub Repo](https://github.com/zdelk/blackjack)
