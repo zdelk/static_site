@@ -1,6 +1,6 @@
 # Welcome to my Portfolio
 
-![My Face](/images/selfie.png)
+![My Face](/images/selfie\_small.png)
 
 Hello, I'm Zachary Delk. I like cats, data, and robotics. My background is broad and doesn't fit neatly in a one page resume. This site showcases some of the personal, academic, and research projects I've worked on over the years.
 
