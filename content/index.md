@@ -2,6 +2,8 @@
 
 ![My Face](/images/selfie\_smaller.png)
 
+## About Me
+
 Hello, I'm Zachary Delk, a researcher and engineer with a passion for data science, robotics, and intelligent automation. I hold a Master’s degree in Intelligent Robotic Systems from Kennesaw State University, along with dual Bachelor’s degrees in Mathematics and Physics. My background spans academic research and hands-on development, and this site highlights a selection of personal, academic, and research projects in robotics, data analysis, and applied machine learning.
 
 ## Areas of Work
